@@ -1,11 +1,5 @@
-export async function generateStaticParams() {
-  return [
-    { slug: "kerri" },
-    { slug: "vpn-mti-project" },
-    { slug: "portfolio" },
-  ];
-}
 "use client";
+
 import { useState, useEffect, use } from "react";
 import { motion } from "framer-motion";
 import jsonData from "@/json/data.json";
