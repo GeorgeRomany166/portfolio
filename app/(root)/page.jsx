@@ -98,7 +98,7 @@ const MyPage = () => {
 										}}>
 										<Button variation="primary">
 											<Link
-												href={"/docs/GEORGE ROMANY CV.pdf"}
+												href={"/docs/GEORGE ROMANY CV_.pdf"}
 												target="_blank"
 												rel="noopener noreferrer"
 												download>
@@ -261,7 +261,7 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<Button variation="primary">
-											<Link href="#">Learn More</Link>
+											<Link href="/projects">Learn More</Link>
 										</Button>
 									</motion.div>
 								</div>

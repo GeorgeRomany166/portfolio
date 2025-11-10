@@ -10,28 +10,9 @@ import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 export const metadata = {
     title: "George | Portofolio",
 
-    description:
-		"My name is Alvalens, I'm a web developer and I'm passionate about it. I'm currently studying at Universitas Negeri Malang.",
-
-    author: "Alvalen Shafelbilyunazra",
-    siteUrl: "https://www.alvalens.my.id",
-    applicationName: "Alvalens",
-
-    keywords: [
-		"alvalens",
-		"alvalen",
-		"alvalen shafel",
-		"shafel",
-		"alvalen shafelbilyunazra",
-		"alvalen shafel bilyunazra",
-		"bloodfallen",
-		"alvalen porto",
-		"alvalen um",
-	],
-
     openGraph: {
 		type: "website",
-		title: "George | Portofolio",
+		
 		site_name: "George | Portofolio",
 		description: "My name is George, This is my portofolio website.",
 		width: 1200,

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, use } from "react";
 import { motion } from "framer-motion";
 import jsonData from "@/json/data.json";

@@ -6,10 +6,10 @@ import Button from "@/components/Button";
 import Image from "next/image";
 
 // images
-import Intervyou1 from "@/public/image/projects/web/intervyou/intervyou-1.png";
-import Intervyou2 from "@/public/image/projects/web/intervyou/intervyou-2.png";
-import Intervyou3 from "@/public/image/projects/web/intervyou/intervyou-3.png";
-import ProjectAll from "@/public/image/projects.png";
+import pro from "@/public/image/projects/webb/pro.png";
+import Host1 from "@/public/image/projects/webb/Host/Host1.png";
+import Host2 from "@/public/image/projects/webb/Host/Host2.png";
+import Host3 from "@/public/image/projects/webb/Host/Host3.png";
 
 import Hr from "@/components/Hr";
 import ProjectCard from "./components/ProjectCard";
@@ -43,8 +43,8 @@ export default function Page() {
 							transition={{ duration: 1, ease: "circOut" }}
 							className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 ">
 							<Image
-								src={ProjectAll}
-								alt="Alvalens"
+								src={pro}
+							
 								layout="fill"
 								objectFit="cover"
 								placeholder="blur"
@@ -97,8 +97,8 @@ export default function Page() {
 									}}
 									className="w-full h-full shadow-lg">
 									<Image
-										src={Intervyou1}
-										alt="Alvalens"
+										src={Host1}
+										
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -121,8 +121,8 @@ export default function Page() {
 									transition={{ delay: 0.3 }}
 									className="w-full h-full shadow-lg ">
 									<Image
-										src={Intervyou3}
-										alt="Alvalens"
+										src={Host3}
+										
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -147,8 +147,8 @@ export default function Page() {
 									}}
 									className="w-full h-full shadow-lg">
 									<Image
-										src={Intervyou2}
-										alt="Alvalens"
+										src={Host2}
+								alt="Alvalens"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -172,25 +172,27 @@ export default function Page() {
 							type: "spring",
 						}}>
 						<h2 className="text-2xl font-bold tracking-wider mb-3">
-							Intervyou AI
+							Hosting website
 						</h2>
 						<p className="text-gray-600 text-justify title text-lg">
-							AI Based interview Preparation Website created to help fresh
-							graduates and job seekers prepare for interviews and optimize
-							their CV through AI-powered features. The website is built using
-							Next.js, TypeScript, Tailwind CSS, Shadcn UI, Prisma, and MySQL
-							(TiDB). This website can comprehensively analyze the user&apos;s
-							interview performance by providing a analysis of the user&apos;s
-							answer, gesture, and material recommendation to improve the user&apos;s
-							interview skills.
+							The HOST Web Hosting Website is a modern, fully responsive landing site designed to showcase professional web hosting 
+							services with a clean and engaging user interface. The homepage features a visually appealing hero section with clear
+							 calls to action, smooth scrolling, and interactive elements that guide users toward exploring hosting plans. 
+							 The pricing section displays multiple hosting packages in a structured and transparent layout,
+							  highlighting features such as storage, bandwidth, and customer support, with intuitive buttons for plan selection. 
+							  The features section introduces key service advantages, including high uptime, fast performance,
+							   and secure hosting infrastructure, presented through modern icons and animations. 
+							   The website also includes an about section that builds trust by explaining the company’s mission and quality standards,
+							    and a contact section where users can easily reach out for inquiries. Built with HTML, CSS, and JavaScript, the project 
+							emphasizes responsive design, accessibility, and optimized loading speed for smooth performance across all devices.
 						</p>{" "}
 						<div className="mt-3">
 							<Button variation="primary">
-								<Link href="projects/intervyou">More</Link>
+								<Link href="projects/Host">More</Link>
 							</Button>
 							<Button variation="secondary">
 								<a
-									href="https://www.intervyou.me"
+									href="https://georgeromany166.github.io/HOST/index.html"
 									target="_blank"
 									rel="noopener noreferrer">
 									Preview
