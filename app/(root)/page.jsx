@@ -98,7 +98,7 @@ const MyPage = () => {
 										}}>
 										<Button variation="primary">
 											<Link
-												href={"/docs/George Romany Labany - Frontend Devoloper.pdf"}
+												href={"/docs/George Romany Labany - Frontend Devoloper1.pdf"}
 												target="_blank"
 												rel="noopener noreferrer"
 												download>
