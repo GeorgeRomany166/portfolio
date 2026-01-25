@@ -1,0 +1,140 @@
+{
+  "Projects": [
+     {
+      "show": true,
+      "title": "Dashborad-Agncy",
+      "desc": [
+"This project is a fully dynamic dashboard designed for an advertising agency to manage its operations efficiently. The dashboard allows administrators to control and manage clients, campaigns, services, and related data through an interactive and user-friendly interface."      
+      ],
+      "year": "2026",
+      "preview": "https://dash-board-agncy.vercel.app/login",
+      "code": "",
+      "thumbnail": "/image/projects/webb/Dashborad-Agncy/Dashbourd-1.png",
+      "images": [
+        "/image/projects/webb/Dashborad-Agncy/Dashbourd-7.png",
+       "/image/projects/webb/Dashborad-Agncy/Dashbourd-2.png",
+      "/image/projects/webb/Dashborad-Agncy/Dashbourd-3.png",
+       "/image/projects/webb/Dashborad-Agncy/Dashbourd-4.png",
+        "/image/projects/webb/Dashborad-Agncy/Dashbourd-5.png",
+      "/image/projects/webb/Dashborad-Agncy/Dashbourd-6.png"
+     
+      
+      ],
+      "tech": [
+        "TypeScript ",
+        "NextJs",
+        "JS",
+        "Tailwind css"
+      ], 
+      "slug": "Dashborad-Agncy",
+      "category": [1, 2]
+    },  {
+      "show": true,
+      "title": "Elegant",
+      "desc": [
+        "Developed a fully functional and modern e-commerce website featuring  categories for men's fashion, women's fashion, electronics, and accessories. Designed with a clean, visually appealing layout to enhance user experience ."
+      ],
+      "year": "2025",
+      "preview": "https://georgeromany166.github.io/Elegaent-e-commars/",
+      "code": "",
+      "thumbnail": "/image/projects/webb/Elegant/elgeant-1.png",
+      "images": [
+        "/image/projects/webb/Elegant/elgeant-2.png",
+       "/image/projects/webb/Elegant/Elgeant-5.png",
+       "/image/projects/webb/Elegant/Elgeant-6.png",
+       "/image/projects/webb/Elegant/Elgeant-7.png",
+        "/image/projects/webb/Elegant/Elgeant-8.png"
+      ],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Tailwind css",
+        "React js",
+        "Context API",
+        "React Router"
+      ], 
+      "slug": "Elegant",
+      "category": [1, 2]
+    },
+    {
+      "show": true,
+      "title": "Hosting Website",
+      "desc": [
+        "The HOST Web Hosting Website is a modern, fully responsive landing site designed to showcase professional web hosting services with a clean and engaging user interface. The homepage features a visually appealing hero section with clear calls to action, smooth scrolling, and interactive elements that guide users toward exploring hosting plans. The pricing section displays multiple hosting packages in a structured and transparent layout, highlighting features such as storage, bandwidth, and customer support, with intuitive buttons for plan selection. The features section introduces key service advantages, including high uptime, fast performance, and secure hosting infrastructure, presented through modern icons and animations. The website also includes an about section that builds trust by explaining the company’s mission and quality standards, and a contact section where users can easily reach out for inquiries. Built with HTML, CSS, and JavaScript, the project emphasizes responsive design, accessibility, and optimized loading speed for smooth performance across all devices."
+      ],
+      "year": "2025",
+      "preview": "https://georgeromany166.github.io/HOST/index.html",
+      "code": "",
+      "thumbnail": "/image/projects/webb/Host/Hostpro.png",
+      "images": [
+        "/image/projects/webb/Host/Host1.png",
+        "/image/projects/webb/Host/Host2.png",
+        "/image/projects/webb/Host/Host3.png",
+        "/image/projects/webb/Host/Host4.png",
+        "/image/projects/webb/Host/Host5.png"
+      ],
+      "tech": [
+         "HTML",
+        "CSS",
+        "JS",
+        "Bootstrap"
+      ], 
+      "slug": "Host",
+      "category": [1, 2]
+    },
+    {
+      "show": true,
+      "title": "Kerri Protfolio Website",
+      "desc": [
+        "A personal portfolio website that I created for a client. The website is built using two main tech, native (HTML, CSSS, JS) .",
+        "The website is created using a modern design and a clean interface that appeals to a wide audience. The website also has a responsive design that makes it easy to use on any device. The website also has a few animations that make the website more interactive and engaging."
+      ],
+      "year": "2025",
+      "preview": "https://678e51bfc7390c4c1c18be1c--benevolent-scone-5c379f.netlify.app/",
+      "code": "",
+      "thumbnail": "/image/projects/webb/kerri/kerri pro.png",
+      "images": [
+        "/image/projects/webb/kerri/kerri1.png",
+        "/image/projects/webb/kerri/kerri2.png",
+        "/image/projects/webb/kerri/kerri3.png"
+      ],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JS"
+      ], 
+      "slug": "Kerri",
+      "category": [1,2]
+    },
+    {
+      "show": true,
+      "title": "mti-vpn",
+      "desc": [
+        "The VPN-MTI Project is my university graduation project, developed as a fully functional and responsive web application that simulates a virtual private network service. I earned an Excellent grade for this project at the Modern University for Technology & Information (MTI). The website features a professional UI design, showcasing secure access simulation, server connection interface, and informative sections about VPN technology. It was built using HTML, CSS, and JavaScript, with a focus on responsive layout, user experience, and performance optimization. The project demonstrates my ability to design and implement modern, user-focused front-end solutions that combine both functionality and aesthetics."
+        
+      ],
+      "year": "2024",
+      "preview": "https://georgeromany166.github.io/vpn-mti-project/",
+      "code": "",
+      "thumbnail": "/image/projects/webb/mti-vpn/mti-vpn1.png",
+      "images": [
+        "/image/projects/webb/mti-vpn/mti-vpn1.png",
+        "/image/projects/webb/mti-vpn/mti-vpn2.png",
+       "/image/projects/webb/mti-vpn/mti-vpn3.png"
+      
+      ],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JS",
+        "Bootstrap"
+      ], 
+      "slug": "mti-vpn",
+      "category": [1, 2]
+    }
+  
+   
+   
+  ]
+}
