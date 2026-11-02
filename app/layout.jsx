@@ -3,6 +3,7 @@ import { Hanken_Grotesk, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import PillNav from "@/components/site/PillNav";
 import Footer from "@/components/site/Footer";
+import LivingBackground from "@/components/site/LivingBackground";
 
 const hanken = Hanken_Grotesk({
 	subsets: ["latin"],
@@ -47,11 +48,14 @@ export default function RootLayout({ children }) {
 					className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">
 					Skip to content
 				</a>
+				<LivingBackground />
 				<PillNav />
-				<main id="main" className="flex-1">
+				<main id="main" className="relative z-10 flex-1">
 					{children}
 				</main>
-				<Footer />
+				<div className="relative z-10">
+					<Footer />
+				</div>
 				<Analytics />
 			</body>
 		</html>

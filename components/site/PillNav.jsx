@@ -22,8 +22,8 @@ export default function PillNav() {
 	}, []);
 
 	return (
-		<header className="pointer-events-none fixed inset-x-0 top-0 z-40">
-			<div className="mx-auto flex max-w-[84rem] items-center justify-between px-5 pt-5 sm:px-8">
+		<header className="pointer-events-none fixed inset-x-0 top-0 z-40 before:absolute before:inset-x-0 before:top-0 before:h-24 before:bg-gradient-to-b before:from-white/95 before:via-white/70 before:to-transparent">
+			<div className="relative mx-auto flex max-w-[84rem] items-center justify-between px-5 pt-5 sm:px-8">
 				<Link
 					href="/"
 					className={`pointer-events-auto text-[15px] font-medium tracking-[-0.02em] transition-opacity ${

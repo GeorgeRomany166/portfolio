@@ -12,43 +12,47 @@ export default function HomePage() {
 	return (
 		<>
 			{/* 01: who I am */}
-			<Chapter n={1} id="about" label="About" className="pt-36 md:pt-48">
-				<h1 className="text-[clamp(2rem,4.6vw,2.75rem)] font-medium leading-[1.08] tracking-[-0.04em]">
-					George Romany is a frontend engineer in Cairo,{" "}
-					<span className="text-soft">building fast, careful interfaces with React, Next.js and TypeScript.</span>
-				</h1>
+			<Chapter n={1} id="about" label="About" width="max-w-[64rem]" className="pt-32 md:pt-44">
+				<div className="grid items-center gap-10 md:grid-cols-[minmax(0,30rem)_minmax(0,1fr)] md:gap-14">
+					<div>
+						<h1 className="text-[clamp(2rem,4.6vw,2.75rem)] font-medium leading-[1.08] tracking-[-0.04em]">
+							George Romany is a frontend engineer in Cairo,{" "}
+							<span className="text-soft">building fast, careful interfaces with React, Next.js and TypeScript.</span>
+						</h1>
 
-				<div className={`mt-10 ${body}`}>
-					<TwoTone
-						lead="By day I build the travel website and booking flow at Rehletna."
-						rest="Most of the job is small decisions about forms, dates and prices, made to feel simple."
-					/>
-					<TwoTone
-						lead="On the side I take on freelance work: an agency dashboard, a bilingual Arabic and English ERP, an online store."
-						rest="Right-to-left layouts are something I actually enjoy getting right."
-					/>
-					<p>
-						I&rsquo;m looking for a team that cares about the details as much as the deadline.{" "}
-						<Link href="#contact" className="lapis font-medium">
-							If that&rsquo;s you, let&rsquo;s talk.
-						</Link>
-					</p>
+						<div className={`mt-10 ${body}`}>
+							<TwoTone
+								lead="By day I build the travel website and booking flow at Rehletna."
+								rest="Most of the job is small decisions about forms, dates and prices, made to feel simple."
+							/>
+							<TwoTone
+								lead="On the side I take on freelance work: an agency dashboard, a bilingual Arabic and English ERP, an online store."
+								rest="Right-to-left layouts are something I actually enjoy getting right."
+							/>
+							<p>
+								I&rsquo;m looking for a team that cares about the details as much as the deadline.{" "}
+								<Link href="#contact" className="lapis font-medium">
+									If that&rsquo;s you, let&rsquo;s talk.
+								</Link>
+							</p>
+						</div>
+					</div>
+
+					<figure className="order-first mx-auto w-full max-w-[22rem] md:order-none md:max-w-none">
+						<div className="dissolve relative aspect-[4/5] saturate-[0.85]">
+							<Image
+								src={Portrait}
+								alt="George Romany"
+								fill
+								priority
+								placeholder="blur"
+								sizes="(min-width: 768px) 30rem, 22rem"
+								className="object-cover object-[50%_22%]"
+							/>
+						</div>
+					</figure>
 				</div>
 			</Chapter>
-
-			<figure className="mx-auto -mt-10 max-w-[44rem] px-5 md:-mt-16">
-				<div className="dissolve relative aspect-[5/6] saturate-[0.85]">
-					<Image
-						src={Portrait}
-						alt="George Romany"
-						fill
-						priority
-						placeholder="blur"
-						sizes="(min-width: 640px) 40rem, 100vw"
-						className="object-cover object-[50%_22%]"
-					/>
-				</div>
-			</figure>
 
 			{/* 02: work */}
 			<Chapter n={2} id="work" label="Selected work" wide>
