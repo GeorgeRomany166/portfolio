@@ -22,6 +22,15 @@ module.exports = withBundleAnalyzer({
 
 		return config;
 	},
+	async redirects() {
+		return [
+			{
+				source: "/projects/Dashborad-Agncy",
+				destination: "/projects/spectra",
+				permanent: true,
+			},
+		];
+	},
 	async headers() {
 		return [
 			{

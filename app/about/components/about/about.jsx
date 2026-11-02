@@ -110,31 +110,27 @@ export default function About() {
 					<h2 className="text-2xl font-bold tracking-wider mb-3">
 						George Romany Labany
 					</h2>
-					<p className="text-gray-600 text-justify title text-lg">
-						Hey there, I&rsquo;m George romany labany , a
+					<p className="text-gray-600 title text-lg leading-relaxed">
+						Hey there, I&rsquo;m George, a{" "}
+						<span className="text-black font-medium">Frontend Engineer</span>{" "}
+						in Cairo. I build production web apps with{" "}
 						<span className="text-black font-medium">
-							{" "}
-							passionate Web Developer
-						</span>{" "}
-						with a growing expertise in
+							React.js, Next.js and TypeScript
+						</span>
+						, currently on the travel booking platform at{" "}
+						<span className="text-black font-medium">Rehletna</span> and on
+						freelance projects like a bilingual Arabic/English ERP system and
+						an agency dashboard.
+					</p>
+					<p className="text-gray-600 title text-lg leading-relaxed mt-4">
+						I hold a B.Sc. in{" "}
+						<span className="text-black font-medium">Computer Science</span> from
+						the{" "}
 						<span className="text-black font-medium">
-							{" "}
-							[Front-End Development].
-						</span>{" "}
-						 I&rsquo;m currently
-						 graduated with degree in{" "}
-						<span className="text-black font-medium">
-							Computer Science
-						</span>{" "}
-						at{" "}
-						<span className="text-black font-medium">
-							Modern University for technology & information.
-						</span>{" "}
-						My work bridges modern web technologies and intelligent systems—from
-						building responsive, scalable websites to exploring generative AI
-						.
-						 Let&rsquo;s connect and explore the evolving intersection
-						of web together!
+							Modern University for Technology &amp; Information (MTI)
+						</span>
+						. I care about clean component architecture, accessibility and
+						turning designs into fast, responsive interfaces.
 					</p>
 					<Card />
 				</motion.div>

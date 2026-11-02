@@ -8,22 +8,23 @@ import { Analytics } from "@vercel/analytics/react";
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 
 export const metadata = {
-    title: "George | Portofolio",
+    title: "George Romany | Frontend Engineer",
+    description:
+		"George Romany, Frontend Engineer in Cairo building production web apps with React.js, Next.js and TypeScript.",
 
     openGraph: {
 		type: "website",
 		
-		site_name: "George | Portofolio",
-		description: "My name is George, This is my portofolio website.",
+		site_name: "George Romany | Frontend Engineer",
+		description: "Frontend Engineer building production web apps with React.js, Next.js and TypeScript.",
 		width: 1200,
 		height: 630,
 		images: [
 			{
 				url: "/og-image-rev.png",
-				alt: "George Portofolio",
+				alt: "George Romany, Frontend Engineer",
 			},
 		],
-		site_name: "George | Portofolio",
 	}
 };
 

@@ -42,6 +42,18 @@ h1, h2, h3, h4, h5, h6 {
 	justify-content: center;
 }
 
+::selection {
+	background: rgb(199 210 254);
+	color: rgb(30 27 75);
+}
+
+a:focus-visible,
+button:focus-visible {
+	outline: 3px solid rgb(129 140 248);
+	outline-offset: 3px;
+	border-radius: 6px;
+}
+
 .navbar {
 	z-index: 49 !important;
 }

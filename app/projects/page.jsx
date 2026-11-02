@@ -7,9 +7,9 @@ import Image from "next/image";
 
 // images
 import pro from "@/public/image/projects/webb/pro.png";
-import elgeant2 from "@/public//image/projects/webb/Elegant/Elgeant-2.png";
-import elgeant3 from "@/public//image/projects/webb/Elegant/Elgeant-3.png";
-import elgeant from "@/public//image/projects/webb/Elegant/elgeant-1.png";
+import spectra2 from "@/public/image/projects/webb/Dashborad-Agncy/Dashbourd-2.png";
+import spectra3 from "@/public/image/projects/webb/Dashborad-Agncy/Dashbourd-5.png";
+import spectra1 from "@/public/image/projects/webb/Dashborad-Agncy/Dashbourd-1.png";
 
 import Hr from "@/components/Hr";
 import ProjectCard from "./components/ProjectCard";
@@ -81,7 +81,7 @@ export default function Page() {
 				<div className="mt-10 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
 					<div className="flex justify-center items-center flex-col my-5 self-start ">
 						<Hr variant="long"></Hr>
-						<h1 className="text-3xl font-bold mt-3">Hightlight</h1>
+						<h1 className="text-3xl font-bold mt-3">Highlight</h1>
 					</div>
 				</div>
 				<div className="relative w-screen mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 mb-10">
@@ -97,7 +97,8 @@ export default function Page() {
 									}}
 									className="w-full h-full shadow-lg">
 									<Image
-										src={elgeant}
+										src={spectra1}
+										alt="Spectra dashboard products table"
 										
 										layout="fill"
 										objectFit="cover"
@@ -121,7 +122,8 @@ export default function Page() {
 									transition={{ delay: 0.3 }}
 									className="w-full h-full shadow-lg ">
 									<Image
-										src={elgeant2}
+										src={spectra2}
+										alt="Spectra dashboard clients view"
 										
 										layout="fill"
 										objectFit="cover"
@@ -147,8 +149,8 @@ export default function Page() {
 									}}
 									className="w-full h-full shadow-lg">
 									<Image
-										src={	elgeant3}
-								alt="George"
+										src={spectra3}
+								alt="Spectra team page"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -172,28 +174,35 @@ export default function Page() {
 							type: "spring",
 						}}>
 						<h2 className="text-2xl font-bold tracking-wider mb-3">
-							Elegaent E-commerce Website
+							Spectra — Agency Dashboard
 						</h2>
-						<p className="text-gray-600 text-justify title text-lg">
-							 Elegaent E-commerce Website is a modern, fully responsive online store designed to provide a 
-							 seamless shopping experience. The homepage features a visually appealing hero section with promotional banners and clear calls to action,
-							 guiding users to explore products effortlessly. Product listings are displayed in a clean grid layout with intuitive filters,
-							 search functionality, and detailed product cards showcasing images, descriptions, prices, and ratings.
-                             The website includes a structured shopping cart and checkout process to enhance usability, ensuring smooth transactions. 
-                             Key features such as fast loading times, mobile-friendly design, and secure payment integration are implemented to boost customer confidence. Additionally,
-                             an about section highlights the store’s mission and values, while a contact section allows users to reach out easily for inquiries or support. Built with HTML,
-                             CSS, and JavaScript, the project emphasizes responsive design, accessibility, and optimized performance for a polished user experience across all devices.
+						<p className="text-gray-600 title text-lg leading-relaxed">
+							An admin dashboard for an advertising agency to manage clients,
+							campaigns, products, team members and job titles. Built with
+							Next.js, TypeScript and Tailwind CSS, fully right-to-left (Arabic),
+							with dark mode, inline-editable data tables, a customizable landing
+							page and protected routes.
+						</p>
+						<ul className="flex flex-wrap gap-2 mt-4" aria-label="Spectra tech stack">
+							{["Next.js", "TypeScript", "Tailwind CSS", "TanStack Query", "Radix UI", "RTL"].map((t) => (
+								<li key={t} className="px-3 py-1 rounded-full text-sm bg-white/70 border border-gray-300 text-gray-800">
+									{t}
+								</li>
+							))}
+						</ul>
+						<p className="text-gray-600 title text-base mt-4">
+							No sign-up needed: the demo logs you in with one click.
 						</p>{" "}
 						<div className="mt-3">
 							<Button variation="primary">
-								<Link href="projects/Elegant">More</Link>
+								<Link href="projects/spectra">Details</Link>
 							</Button>
 							<Button variation="secondary">
 								<a
-									href="https://georgeromany166.github.io/Elegaent-e-commars/"
+									href="https://dash-board-agncy.vercel.app/login?demo=1"
 									target="_blank"
 									rel="noopener noreferrer">
-									Preview
+									Try live demo
 								</a>
 							</Button>
 						</div>
@@ -216,7 +225,7 @@ export default function Page() {
 								delay: 0.7,
 								type: "spring",
 							}}>
-							Other Note Worthy Projects
+							Other Noteworthy Projects
 						</motion.h1>
 					</div>
 				</div>

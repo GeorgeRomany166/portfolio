@@ -55,6 +55,17 @@ const MyPage = () => {
 											/>
 										</div>
 									</div>
+									<motion.span
+										className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/70 border border-emerald-300 text-emerald-800 text-sm"
+										initial={{ x: -100, opacity: 0 }}
+										whileInView={{ x: 0, opacity: 1 }}
+										transition={{ delay: 0.1, type: "spring" }}>
+										<span className="relative flex h-2 w-2" aria-hidden="true">
+											<span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping"></span>
+											<span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+										</span>
+										Open to frontend roles · Cairo &amp; remote
+									</motion.span>
 									<motion.h3
 										className="uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray-500"
 										initial={{ x: -100, opacity: 0 }}
@@ -63,7 +74,7 @@ const MyPage = () => {
 											delay: 0.2,
 											type: "spring",
 										}}>
-										George Romany 
+										George Romany
 									</motion.h3>
 									<motion.h1
 										className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
@@ -73,7 +84,7 @@ const MyPage = () => {
 											delay: 0.3,
 											type: "spring",
 										}}>
-										Front-End Developer
+										Frontend Engineer
 									</motion.h1>
 									<motion.p
 										className="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
@@ -83,11 +94,28 @@ const MyPage = () => {
 											delay: 0.4,
 											type: "spring",
 										}}>
-										Hi! I&rsquo;am George, A junior Front-End developer specializing in
-										modern Web Development with a growing focus on Artificial
-										Intelligence. Passionate about building scalable,
-										user-friendly web applications and exploring AI technologies.
+										Hi! I&rsquo;m George, a Frontend Engineer in Cairo building
+										production web apps with React.js, Next.js and TypeScript, from a
+										travel booking platform at Rehletna to a bilingual (Arabic/English,
+										RTL) ERP system.
 									</motion.p>
+									<motion.ul
+										className="flex flex-wrap justify-center md:justify-start gap-2 mt-6"
+										aria-label="Main technologies"
+										initial={{ x: -100, opacity: 0 }}
+										whileInView={{ x: 0, opacity: 1 }}
+										transition={{
+											delay: 0.45,
+											type: "spring",
+										}}>
+										{["React.js", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "RTL / i18n"].map((t) => (
+											<li
+												key={t}
+												className="px-3 py-1 rounded-full text-sm bg-white/70 border border-gray-300 text-gray-800">
+												{t}
+											</li>
+										))}
+									</motion.ul>
 									<motion.div
 										className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
 										initial={{ x: -100, opacity: 0 }}
@@ -98,7 +126,7 @@ const MyPage = () => {
 										}}>
 										<Button variation="primary">
 											<Link
-												href={"/docs/George Romany Labany - Frontend Devoloper1.pdf"}
+												href={"/docs/George-Romany-Labany-Frontend-Engineer-CV.pdf"}
 												target="_blank"
 												rel="noopener noreferrer"
 												download>
@@ -181,7 +209,7 @@ const MyPage = () => {
 											delay: 0.2,
 											type: "spring",
 										}}>
-										A brief introduction about me and my interest.
+										Who I am, where I&rsquo;ve worked and the tools I use every day.
 									</motion.p>
 									<motion.div
 										initial={{ y: 40, opacity: 0 }}
@@ -191,7 +219,7 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<Button variation="primary">
-											<Link href="/about">Learn More</Link>
+											<Link href="/about">About Me</Link>
 										</Button>
 									</motion.div>
 								</div>
@@ -247,10 +275,9 @@ const MyPage = () => {
 											delay: 0.2,
 											type: "spring",
 										}}>
-										This is some of my projects that I have done{" "}
+										Dashboards, e-commerce and landing sites,{" "}
 										<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-											{" "}
-											and currently working on.
+											with live demos you can try.
 										</span>
 									</motion.p>
 									<motion.div
@@ -261,7 +288,7 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										<Button variation="primary">
-											<Link href="/projects">Learn More</Link>
+											<Link href="/projects">View Projects</Link>
 										</Button>
 									</motion.div>
 								</div>
@@ -330,7 +357,9 @@ const MyPage = () => {
 											delay: 0.3,
 											type: "spring",
 										}}>
-										<a href="ge@gmail.com?subject=Hello&body=Hello George,">
+										<a
+											href="mailto:georgeromany166@gmail.com?subject=Hello&body=Hello George,"
+											className="underline decoration-indigo-500 decoration-2 underline-offset-4 hover:text-indigo-600 transition-colors">
 											georgeromany166@gmail.com
 										</a>
 									</motion.p>
@@ -338,6 +367,7 @@ const MyPage = () => {
 									<div className="flex justify-center items-center space-x-4">
 										<motion.a
 											href="mailto:georgeromany166@gmail.com?subject=Hello&body=Hello George,"
+											aria-label="Email"
 											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
 											initial={{ y: 40, opacity: 0 }}
 											whileInView={{ y: 0, opacity: 1 }}
@@ -350,6 +380,7 @@ const MyPage = () => {
 
 										<motion.a
 											href="https://github.com/GeorgeRomany166"
+											aria-label="GitHub"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
@@ -363,6 +394,7 @@ const MyPage = () => {
 										</motion.a>
 										<motion.a
 											href="https://www.instagram.com/george_romany1?igsh=ODdiODRqMWtydHc4"
+											aria-label="Instagram"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
@@ -378,7 +410,8 @@ const MyPage = () => {
 											/>
 										</motion.a>
 										<motion.a
-											href="https://www.linkedin.com/in/george-romany-323a34347/"
+											href="https://www.linkedin.com/in/george-romany/"
+											aria-label="LinkedIn"
 											target="_blank"
 											rel="noopener noreferrer"
 											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"

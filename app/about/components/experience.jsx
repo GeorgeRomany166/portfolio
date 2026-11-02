@@ -3,46 +3,57 @@ import Hr from "@/components/Hr";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-const experiences = [	
+// Newest first.
+const experiences = [
 	{
 		id: 1,
-		startDate: "June 2025",
-		endDate: " Dec. 2025",
-		company: "Digital Egypt Pioneers Initiative (DEPI)",
-		position: "React Frontend Web Developer Program",
-		type: "Seasonal",
-		location: "Cairo , Egypt",
+		startDate: "Sep 2025",
+		endDate: "Present",
+		company: "Rehletna",
+		position: "Junior Frontend Engineer",
+		type: "Full-time · Hybrid",
+		location: "Cairo, Egypt",
 		description:
-			"Digital Egypt Pioneers Initiative (DEPI) Funded by the Ministry of Communications and Information Technology (MCIT), and delivered by Egypt University of Informatics (EUI)",
-		skills: ["React", "Git",  "JavaScript", "Teamwork"],
+			"Building Rehletna's customer-facing travel website and online booking experience with React.js, Next.js, TypeScript and Tailwind CSS: reusable, accessible UI components, Figma-to-code pages and REST API integration across multi-step booking flows.",
+		skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs"],
 	},
 	{
 		id: 2,
-		startDate: "June 2023",
-		endDate: "Dec. 2023 ",	
-		company: "ROUTE ",
-		position: "Trainer",
-		type: "On Site",
-		location: "Cairo , Egypt",
+		startDate: "Jan 2025",
+		endDate: "Present",
+		company: "Freelance",
+		position: "Frontend Developer",
+		type: "Remote",
+		location: "Cairo, Egypt",
 		description:
-			"Route is an Egyptian IT-Training Center founded in 2012 We have identified the unique challenges people may face in learning a new technology and have exerted efforts in providing strategies to overcome them.",
-		skills: ["OOP", "HTML", "CSS", "JavaScript", "Teamwork"],
-	}// },
-	// {
-	// 	id: 3,
-	// 	startDate: "Jun 2023",
-	// 	endDate: "Feb 2025",
-	// 	company: "PUI-PT DLI",
-	// 	position: "Fullstack Developer",
-	// 	type: "Freelance",
-	// 	location: "Malang, Indonesia",
-	// 	description:
-	// 		"Crafted and maintained web applications using Laravel, ensuring high performance and responsiveness. Collaborated with designers and other  developers to create seamless user experiences.",
-	// 	skills: ["React", "Git",  "JavaScript", "Teamwork"],
-	// }
+			"Spectra, an agency admin dashboard (Next.js, TypeScript); Veendra, a bilingual Arabic/English ERP & POS system; an e-commerce store (React, Context API); and 8 portfolio website templates.",
+		skills: ["Next.js", "React.js", "TypeScript", "RTL / i18n", "Dashboards"],
+	},
+	{
+		id: 3,
+		startDate: "Jun 2025",
+		endDate: "Dec 2025",
+		company: "Digital Egypt Pioneers Initiative (DEPI)",
+		position: "React Frontend Web Developer Program",
+		type: "Training program",
+		location: "Cairo, Egypt",
+		description:
+			"Program funded by the Ministry of Communications and Information Technology (MCIT) and delivered by Egypt University of Informatics (EUI): 93 hours of technical training plus soft skills, Business English and freelancing.",
+		skills: ["React", "Git", "JavaScript", "Teamwork"],
+	},
+	{
+		id: 4,
+		startDate: "Jun 2023",
+		endDate: "Dec 2023",
+		company: "Route Academy",
+		position: "Front-End Web Development with React (96 hrs)",
+		type: "Course",
+		location: "Cairo, Egypt",
+		description:
+			"Hands-on front-end course covering HTML, CSS, JavaScript, OOP and React fundamentals.",
+		skills: ["HTML", "CSS", "JavaScript", "OOP", "React"],
+	},
 ];
-
-experiences.reverse();
 
 function Title() {
 	return (

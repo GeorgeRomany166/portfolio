@@ -145,8 +145,9 @@ function Page(props) {
 									<a
 										href={data.preview}
 										target="_blank"
-										rel="noopener noreferrer">
-										Preview{" "}
+										rel="noopener noreferrer"
+										className="underline decoration-indigo-500 decoration-2 underline-offset-4 hover:text-indigo-600 transition-colors">
+										{data.previewLabel || "Preview"}{" "}
 										<FontAwesomeIcon
 											icon={faArrowUpRightFromSquare}
 											className="ml-3"
