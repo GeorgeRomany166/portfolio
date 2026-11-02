@@ -1,439 +1,138 @@
-"use client";
-import ReactFullpage from "@fullpage/react-fullpage";
-import Image from "next/legacy/image";
-// import "../globals.css";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
+import { Chapter, TwoTone } from "@/components/site/Chapter";
+import Work from "@/components/site/Work";
+import QuoteReveal from "@/components/site/QuoteReveal";
+import { experience, profile, services } from "@/lib/content";
+import Portrait from "@/public/image/me4.jpg";
 
-// components
-import Button from "@/components/Button";
-import Me from "@/public/image/me.jpg";
-import MeAbout from "@/public/image/me4.jpg";
-import Setup from "@/public/image/setup.jpg";
-import ProjectAll from "@/public/image/projects.png";
-import Hr from "@/components/Hr";
-// icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+const body = "space-y-6 text-[1.1875rem] leading-[1.42] tracking-[-0.018em]";
 
-const MyPage = () => {
-	const fullpageOptions = {
-		anchors: ["home", "about", "projects", "contact"],
-		scrollingSpeed: 1000,
-		licenseKey: "gplv3-license",
-		menu: "#sidebar",
-		lockAnchors: false,
-	};
-
+export default function HomePage() {
 	return (
-		<div>
-			<ReactFullpage
-				render={({ state, fullpageApi }) => (
-					<ReactFullpage.Wrapper>
-						<div className="section">
-							<div className="mx-auto container grid grid-cols-1 md:grid-cols-3 gap-4 p-10 overflow-hidden md:px-20">
-								<motion.div
-									className="col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-start"
-									initial={{ x: -100, opacity: 0 }}
-									whileInView={{ x: 0, opacity: 1 }}
-									transition={{
-										type: "spring",
-									}}>
-									<div className="block md:hidden col-span-1 mx-auto my-10">
-										<div className="bg-slate-500 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300">
-											<Image
-												src={Me}
-												width={500}
-												height={500}
-												className="rounded-full w-full h-full object-cover "
-												alt="George"
-												placeholder="blur"
-											/>
-										</div>
-									</div>
-									<motion.span
-										className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-white/70 border border-emerald-300 text-emerald-800 text-sm"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{ delay: 0.1, type: "spring" }}>
-										<span className="relative flex h-2 w-2" aria-hidden="true">
-											<span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 motion-safe:animate-ping"></span>
-											<span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
-										</span>
-										Open to frontend roles · Cairo &amp; remote
-									</motion.span>
-									<motion.h3
-										className="uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray-500"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.2,
-											type: "spring",
-										}}>
-										George Romany
-									</motion.h3>
-									<motion.h1
-										className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.3,
-											type: "spring",
-										}}>
-										Frontend Engineer
-									</motion.h1>
-									<motion.p
-										className="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.4,
-											type: "spring",
-										}}>
-										Hi! I&rsquo;m George, a Frontend Engineer in Cairo building
-										production web apps with React.js, Next.js and TypeScript, from a
-										travel booking platform at Rehletna to a bilingual (Arabic/English,
-										RTL) ERP system.
-									</motion.p>
-									<motion.ul
-										className="flex flex-wrap justify-center md:justify-start gap-2 mt-6"
-										aria-label="Main technologies"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.45,
-											type: "spring",
-										}}>
-										{["React.js", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "RTL / i18n"].map((t) => (
-											<li
-												key={t}
-												className="px-3 py-1 rounded-full text-sm bg-white/70 border border-gray-300 text-gray-800">
-												{t}
-											</li>
-										))}
-									</motion.ul>
-									<motion.div
-										className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.5,
-											type: "spring",
-										}}>
-										<Button variation="primary">
-											<Link
-												href={"/docs/George-Romany-Labany-Frontend-Engineer-CV.pdf"}
-												target="_blank"
-												rel="noopener noreferrer"
-												download>
-												Download CV
-											</Link>
-										</Button>
-										<Button variation="secondary">
-											<a href="#contact">Contact Me</a>
-										</Button>
-									</motion.div>
-								</motion.div>
-								<motion.div
-									className="hidden md:flex col-span-1 mx-auto justify-center items-center "
-									initial={{ x: 100, opacity: 0 }}
-									whileInView={{ x: 0, opacity: 1 }}
-									transition={{
-										delay: 0.7,
-										type: "spring",
-									}}>
-									<div className="rounded-full h-auto w-auto  lg:px-12 grayscale hover:grayscale-0 transition-all ease duration-300">
-										<Image
-											src={Me}
-											width={400}
-											height={550}
-											placeholder="blur"
-											alt="george"
-											className="rounded-full w-full h-full object-cover"
-										/>
-									</div>
-								</motion.div>
-							</div>
-						</div>
-						<div className="section">
-							<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
-									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
-										initial={{
-											x: 300,
-											opacity: 0,
-											z: -100,
-										}}
-										whileInView={{
-											x: 0,
-											opacity: 1,
-											z: 0,
-										}}
-										transition={{
-											delay: 0.5,
-											type: "spring",
-											stiffness: 100,
-											damping: 20,
-										}}>
-										<Image
-											src={MeAbout}
-											layout="fill"
-											className="object-cover"
-											alt="George"
-											placeholder="blur"
-										/>
-									</motion.div>
-								</div>
-								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
-									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.1,
-											type: "spring",
-										}}>
-										About Me
-									</motion.h1>
-									<Hr />
-									<motion.p
-										className="title  text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.2,
-											type: "spring",
-										}}>
-										Who I am, where I&rsquo;ve worked and the tools I use every day.
-									</motion.p>
-									<motion.div
-										initial={{ y: 40, opacity: 0 }}
-										whileInView={{ y: 0, opacity: 1 }}
-										transition={{
-											delay: 0.3,
-											type: "spring",
-										}}>
-										<Button variation="primary">
-											<Link href="/about">About Me</Link>
-										</Button>
-									</motion.div>
-								</div>
-							</div>
-						</div>
-						<div className="section">
-							<div className="relative md:h-screen w-screen gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
-									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 "
-										initial={{
-											x: 300,
-											opacity: 0,
-											z: -100,
-										}}
-										whileInView={{
-											x: 0,
-											opacity: 1,
-											z: 0,
-										}}
-										transition={{
-											delay: 0.5,
-											type: "spring",
-											stiffness: 100,
-											damping: 20,
-										}}>
-										<Image
-											src={ProjectAll}
-											layout="fill"
-											className="object-cover"
-											alt="Project Setup"
-											placeholder="blur"
-										/>
-									</motion.div>
-								</div>
-								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
-									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.1,
-											type: "spring",
-										}}>
-										My Projects
-									</motion.h1>
-									<Hr />
-									<motion.p
-										className="title  text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.2,
-											type: "spring",
-										}}>
-										Dashboards, e-commerce and landing sites,{" "}
-										<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-											with live demos you can try.
-										</span>
-									</motion.p>
-									<motion.div
-										initial={{ y: 40, opacity: 0 }}
-										whileInView={{ y: 0, opacity: 1 }}
-										transition={{
-											delay: 0.3,
-											type: "spring",
-										}}>
-										<Button variation="primary">
-											<Link href="/projects">View Projects</Link>
-										</Button>
-									</motion.div>
-								</div>
-							</div>
-						</div>
-						<div className="section">
-							<div className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
-									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
-										initial={{
-											x: 300,
-											opacity: 0,
-											z: -100,
-										}}
-										whileInView={{
-											x: 0,
-											opacity: 1,
-											z: 0,
-										}}
-										transition={{
-											delay: 0.5,
-											type: "spring",
-											stiffness: 100,
-											damping: 20,
-										}}>
-										<Image
-											src={Setup}
-											layout="fill"
-											className="object-cover"
-												alt="George Setup"
-											placeholder="blur"
-										/>
-									</motion.div>
-								</div>
-								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 overflow-hidden">
-									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold mb-3"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.1,
-											type: "spring",
-										}}>
-										Get In Touch
-									</motion.h1>
-									<Hr />
-									<motion.p
-										className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] md:mb-5"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.2,
-											type: "spring",
-										}}>
-										Feel free to contact me if you have any{" "}
-										<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-											questions or just want to say hi.
-										</span>
-									</motion.p>
-									<motion.p
-										className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
-										initial={{ x: -100, opacity: 0 }}
-										whileInView={{ x: 0, opacity: 1 }}
-										transition={{
-											delay: 0.3,
-											type: "spring",
-										}}>
-										<a
-											href="mailto:georgeromany166@gmail.com?subject=Hello&body=Hello George,"
-											className="underline decoration-indigo-500 decoration-2 underline-offset-4 hover:text-indigo-600 transition-colors">
-											georgeromany166@gmail.com
-										</a>
-									</motion.p>
-									{/* icons */}
-									<div className="flex justify-center items-center space-x-4">
-										<motion.a
-											href="mailto:georgeromany166@gmail.com?subject=Hello&body=Hello George,"
-											aria-label="Email"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-											initial={{ y: 40, opacity: 0 }}
-											whileInView={{ y: 0, opacity: 1 }}
-											transition={{
-												y: { delay: 0.1 },
-												opacity: { delay: 0.2 },
-											}}>
-											<FontAwesomeIcon icon={faEnvelope} className="text-3xl" />
-										</motion.a>
+		<>
+			{/* 01: who I am */}
+			<Chapter n={1} id="about" label="About" className="pt-36 md:pt-48">
+				<h1 className="text-[clamp(2rem,4.6vw,2.75rem)] font-medium leading-[1.08] tracking-[-0.04em]">
+					George Romany is a frontend engineer in Cairo,{" "}
+					<span className="text-soft">building fast, careful interfaces with React, Next.js and TypeScript.</span>
+				</h1>
 
-										<motion.a
-											href="https://github.com/GeorgeRomany166"
-											aria-label="GitHub"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-											initial={{ opacity: 0, y: 40 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{
-												y: { delay: 0.2 },
-												opacity: { delay: 0.3 },
-											}}>
-											<FontAwesomeIcon icon={faGithub} className="text-3xl" />
-										</motion.a>
-										<motion.a
-											href="https://www.instagram.com/george_romany1?igsh=ODdiODRqMWtydHc4"
-											aria-label="Instagram"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-											initial={{ opacity: 0, y: 40 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{
-												y: { delay: 0.3 },
-												opacity: { delay: 0.4 },
-											}}>
-											<FontAwesomeIcon
-												icon={faInstagram}
-												className="text-3xl"
-											/>
-										</motion.a>
-										<motion.a
-											href="https://www.linkedin.com/in/george-romany/"
-											aria-label="LinkedIn"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-											initial={{ opacity: 0, y: 40 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{
-												y: { delay: 0.4 },
-												opacity: { delay: 0.5 },
-											}}>
-											<FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
-										</motion.a>
-									
-									</div>
-								</div>
-							</div>
+				<div className={`mt-10 ${body}`}>
+					<TwoTone
+						lead="By day I build the travel website and booking flow at Rehletna."
+						rest="Most of the job is small decisions about forms, dates and prices, made to feel simple."
+					/>
+					<TwoTone
+						lead="On the side I take on freelance work: an agency dashboard, a bilingual Arabic and English ERP, an online store."
+						rest="Right-to-left layouts are something I actually enjoy getting right."
+					/>
+					<p>
+						I&rsquo;m looking for a team that cares about the details as much as the deadline.{" "}
+						<Link href="#contact" className="lapis font-medium">
+							If that&rsquo;s you, let&rsquo;s talk.
+						</Link>
+					</p>
+				</div>
+			</Chapter>
+
+			<figure className="mx-auto -mt-10 max-w-[44rem] px-5 md:-mt-16">
+				<div className="dissolve relative aspect-[5/6] saturate-[0.85]">
+					<Image
+						src={Portrait}
+						alt="George Romany"
+						fill
+						priority
+						placeholder="blur"
+						sizes="(min-width: 640px) 40rem, 100vw"
+						className="object-cover object-[50%_22%]"
+					/>
+				</div>
+			</figure>
+
+			{/* 02: work */}
+			<Chapter n={2} id="work" label="Selected work" wide>
+				<div className="mb-12 max-w-[30rem]">
+					<h2 className="text-[1.75rem] font-medium tracking-[-0.035em]">Selected work</h2>
+					<p className="mt-3 text-soft">A few things I&rsquo;ve built, from the first commit to launch.</p>
+				</div>
+				<Work />
+			</Chapter>
+
+			{/* 03: what I do */}
+			<Chapter n={3} id="services" label="What I do">
+				<h2 className="text-[1.75rem] font-medium tracking-[-0.035em]">What I do</h2>
+				<p className="mt-3 text-soft">Frontend, end to end. I don&rsquo;t pretend to do the rest.</p>
+				<dl className="mt-10 divide-y divide-rule border-y border-rule">
+					{services.map(([title, text]) => (
+						<div key={title} className="grid gap-1 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6">
+							<dt className="font-medium">{title}</dt>
+							<dd className="text-soft">{text}</dd>
 						</div>
-					</ReactFullpage.Wrapper>
-				)}
-				{...fullpageOptions}
-			/>
-		</div>
+					))}
+				</dl>
+			</Chapter>
+
+			{/* 04: experience */}
+			<Chapter n={4} id="experience" label="Experience" width="max-w-[48rem]">
+				<div className="max-w-[30rem]">
+					<h2 className="text-[1.75rem] font-medium tracking-[-0.035em]">Experience</h2>
+					<p className="mt-3 text-soft">
+						The full story is in my{" "}
+						<a href={profile.cv} download className="text-ink underline decoration-faint underline-offset-4 hover:decoration-ink">
+							CV
+						</a>
+						.
+					</p>
+				</div>
+				<ol className="mt-10 border-t border-rule">
+					{experience.map((e) => (
+						<li
+							key={e.hash}
+							className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[11rem_1fr] sm:gap-8">
+							<span className="text-[14px] text-soft sm:pt-0.5">{e.date}</span>
+							<div>
+								<p className="font-medium">
+									{e.role}
+									<span className="font-normal text-soft">, {e.company}</span>
+								</p>
+								<p className="mt-1 max-w-[56ch] text-[15px] text-soft">{e.points[0]}</p>
+							</div>
+						</li>
+					))}
+				</ol>
+			</Chapter>
+
+			{/* 05: a belief */}
+			<Chapter n={5} id="belief" label="What I believe" wide center>
+				<div className="mx-auto max-w-[46rem]">
+					<QuoteReveal text="Good frontend work is invisible. People only notice that everything works." />
+				</div>
+			</Chapter>
+
+			{/* 06: contact */}
+			<Chapter n={6} id="contact" label="Contact" center>
+				<h2 className="text-[1.75rem] font-medium tracking-[-0.035em]">Want to work together?</h2>
+				<TwoTone
+					className="mt-4 text-[1.1875rem] leading-[1.42]"
+					lead="I'm open to frontend roles in Cairo, hybrid or remote."
+					rest="Email is the quickest way to reach me."
+				/>
+				<div className="mt-10 flex flex-wrap items-center justify-center gap-2 text-[15px]">
+					<a
+						href={`mailto:${profile.email}?subject=Hello%20George`}
+						className="rounded-full bg-ink px-5 py-2.5 text-white shadow-[0_6px_18px_-8px_rgb(0_0_0/0.45)] hover:bg-[#3a3a3e]">
+						Email me
+					</a>
+					<a
+						href={profile.cv}
+						download
+						className="rounded-full border border-rule px-5 py-2.5 text-ink hover:border-faint">
+						Download CV
+					</a>
+				</div>
+				<p className="mt-6 text-[15px] text-soft">{profile.email}</p>
+			</Chapter>
+		</>
 	);
-};
-
-export default MyPage;
+}

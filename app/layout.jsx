@@ -1,41 +1,57 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-config.autoAddCss = false;
-import "./nprogress.css";
+import { Hanken_Grotesk, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import ClientTopProgressBar from "@/components/ClientTopProgressBar";
+import PillNav from "@/components/site/PillNav";
+import Footer from "@/components/site/Footer";
+
+const hanken = Hanken_Grotesk({
+	subsets: ["latin"],
+	weight: ["400", "500", "600"],
+	variable: "--font-hanken",
+	display: "swap",
+});
+
+const geistMono = Geist_Mono({
+	subsets: ["latin"],
+	weight: ["400"],
+	variable: "--font-geist-mono",
+	display: "swap",
+});
 
 export const metadata = {
-    title: "George Romany | Frontend Engineer",
-    description:
-		"George Romany, Frontend Engineer in Cairo building production web apps with React.js, Next.js and TypeScript.",
-
-    openGraph: {
+	metadataBase: new URL("https://portfolio-61xb.vercel.app"),
+	title: {
+		default: "George Romany, Frontend Engineer",
+		template: "%s, George Romany",
+	},
+	description:
+		"George Romany is a frontend engineer in Cairo building fast, careful interfaces with React, Next.js and TypeScript.",
+	openGraph: {
 		type: "website",
-		
-		site_name: "George Romany | Frontend Engineer",
-		description: "Frontend Engineer building production web apps with React.js, Next.js and TypeScript.",
-		width: 1200,
-		height: 630,
-		images: [
-			{
-				url: "/og-image-rev.png",
-				alt: "George Romany, Frontend Engineer",
-			},
-		],
-	}
+		siteName: "George Romany",
+		description: "Frontend engineer in Cairo. React, Next.js, TypeScript.",
+		images: [{ url: "/og-image-rev.png", alt: "George Romany, Frontend Engineer" }],
+	},
+};
+
+export const viewport = {
+	themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body>
-				<ClientTopProgressBar />
-				<Navbar />
-				{children}
-				{/* <Chat /> */}
+		<html lang="en" className={`${hanken.variable} ${geistMono.variable}`}>
+			<body className="flex min-h-dvh flex-col">
+				<a
+					href="#main"
+					className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">
+					Skip to content
+				</a>
+				<PillNav />
+				<main id="main" className="flex-1">
+					{children}
+				</main>
+				<Footer />
 				<Analytics />
 			</body>
 		</html>

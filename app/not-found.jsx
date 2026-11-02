@@ -1,33 +1,20 @@
-"use client"
-import React from "react";
 import Link from "next/link";
 
-const NotFound = () => (
-	<div>
-		<div className="relative min-h-screen w-full  gap-4 p-10 flex justify-center items-center flex-col mb-10 ">
-			<div className="min-h-screen flex justify-center items-center">
-				<div className="mx-auto grid grid-cols-1   ">
-					<div className="flex justify-center items-center flex-col mb-5 space-y-10">
-						<div>
-							<h2 className="uppercase font-normal text-lg tracking-[8px] text-neutral-400 text-center">
-								Page not found
-							</h2>
-							<h1 className="text-4xl font-medium text-neutral-900 text-center">
-								404
-							</h1>
-						</div>
-						<div>
-							<button
-								onClick={() => window.history.back()}
-								className="text-lg text-neutral-900 hover:text-neutral-800 text-center border-2 border-gray-800 rounded-xl p-3 py-2 mt-2">
-								Go Back
-							</button>
-						</div>
-					</div>
-				</div>
+export default function NotFound() {
+	return (
+		<div className="mx-auto max-w-[30rem] px-5 pb-24 pt-44 sm:px-0">
+			<h1 className="text-[clamp(2rem,4.6vw,2.75rem)] font-medium leading-[1.08] tracking-[-0.04em]">
+				This page doesn&rsquo;t exist.{" "}
+				<span className="text-soft">The link may be old, or the page has moved.</span>
+			</h1>
+			<div className="mt-10 flex flex-wrap gap-2 text-[15px]">
+				<Link href="/" className="rounded-full bg-ink px-5 py-2.5 text-white hover:bg-[#3a3a3e]">
+					Go to the home page
+				</Link>
+				<Link href="/projects" className="rounded-full border border-rule px-5 py-2.5 hover:border-faint">
+					See my work
+				</Link>
 			</div>
 		</div>
-	</div>
-);
-
-export default NotFound;
+	);
+}
